@@ -47,5 +47,5 @@ neo4j$ MATCH (n) RETURN n
 
 ## How to get dorect and indirect dependencies for package
 open `http://localhost:5001/dependencies/<PAKCGE NAME>` with browser. it will return list of packages which given package is directly or indirectly depend on them.<br>
-**\* please make sure `/` is encoded as `%2F`.<br>**
+**\* please make sure `/` in `<PAKCGE NAME>` is encoded as `%2F`.<br>**
 You can get package names by opening `http://localhost:5001/package_names`. this endpoint will return all package names.
