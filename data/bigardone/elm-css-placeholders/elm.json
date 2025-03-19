@@ -1,0 +1,25 @@
+{
+    "type": "package",
+    "name": "bigardone/elm-css-placeholders",
+    "summary": "A package to generate HTML placeholders using elm-css.",
+    "license": "BSD-3-Clause",
+    "version": "2.0.1",
+    "exposed-modules": [
+        "Placeholders.Block",
+        "Placeholders.Circle",
+        "Placeholders.Line",
+        "Placeholders.Rectangle",
+        "Placeholders.Square",
+        "Placeholders.Triangle",
+        "Placeholders.VerticalLine"
+    ],
+    "elm-version": "0.19.0 <= v < 0.20.0",
+    "dependencies": {
+        "elm/core": "1.0.0 <= v < 2.0.0",
+        "elm/html": "1.0.0 <= v < 2.0.0",
+        "elm/random": "1.0.0 <= v < 2.0.0",
+        "elm-community/random-extra": "3.1.0 <= v < 4.0.0",
+        "rtfeldman/elm-css": "16.0.1 <= v < 17.0.0"
+    },
+    "test-dependencies": {}
+}

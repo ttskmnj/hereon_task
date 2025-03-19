@@ -1,0 +1,18 @@
+{
+    "type": "package",
+    "name": "K-Adam/elm-dom",
+    "summary": "DOM traversal for Elm event-handlers and ports",
+    "license": "Apache-2.0",
+    "version": "1.0.0",
+    "exposed-modules": [
+        "DOM"
+    ],
+    "elm-version": "0.19.0 <= v < 0.20.0",
+    "dependencies": {
+        "elm/core": "1.0.0 <= v < 2.0.0",
+        "elm/json": "1.0.0 <= v < 2.0.0"
+    },
+    "test-dependencies": {
+        "elm-explorations/test": "1.2.2 <= v < 2.0.0"
+    }
+}

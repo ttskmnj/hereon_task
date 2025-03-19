@@ -1,0 +1,20 @@
+{
+    "type": "package",
+    "name": "jfmengels/elm-review-code-style",
+    "summary": "Provide elm-review rules to follow some of my personal code style preferences",
+    "license": "BSD-3-Clause",
+    "version": "1.1.4",
+    "exposed-modules": [
+        "NoSimpleLetBody",
+        "NoUnnecessaryTrailingUnderscore"
+    ],
+    "elm-version": "0.19.0 <= v < 0.20.0",
+    "dependencies": {
+        "elm/core": "1.0.5 <= v < 2.0.0",
+        "jfmengels/elm-review": "2.13.0 <= v < 3.0.0",
+        "stil4m/elm-syntax": "7.2.9 <= v < 8.0.0"
+    },
+    "test-dependencies": {
+        "elm-explorations/test": "2.1.1 <= v < 3.0.0"
+    }
+}

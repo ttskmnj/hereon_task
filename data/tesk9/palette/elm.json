@@ -1,0 +1,26 @@
+{
+    "type": "package",
+    "name": "tesk9/palette",
+    "summary": "Work with colors and generate palettes.",
+    "license": "BSD-3-Clause",
+    "version": "3.0.1",
+    "exposed-modules": [
+        "SolidColor",
+        "SolidColor.Accessibility",
+        "TransparentColor",
+        "Palette.Generative",
+        "Palette.X11",
+        "Palette.Tango",
+        "Palette.Cubehelix"
+    ],
+    "elm-version": "0.19.0 <= v < 0.20.0",
+    "dependencies": {
+        "elm/core": "1.0.0 <= v < 2.0.0",
+        "elm/json": "1.0.0 <= v < 2.0.0"
+    },
+    "test-dependencies": {
+        "elm/random": "1.0.0 <= v < 2.0.0",
+        "elm/time": "1.0.0 <= v < 2.0.0",
+        "elm-explorations/test": "1.1.0 <= v < 2.0.0"
+    }
+}

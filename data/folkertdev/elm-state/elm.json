@@ -1,0 +1,1 @@
+{"type":"package","name":"folkertdev/elm-state","summary":"Threading state through computation","license":"BSD-3-Clause","version":"3.0.0","exposed-modules":["State"],"elm-version":"0.18.0 <= v < 0.19.0","dependencies":{"elm-lang/core":"5.0.0 <= v < 6.0.0"},"test-dependencies":{}}

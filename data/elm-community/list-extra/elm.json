@@ -1,0 +1,1 @@
+{"type":"package","name":"elm-community/list-extra","summary":"Convenience functions for working with List","license":"MIT","version":"3.0.0","exposed-modules":["List.Extra"],"elm-version":"0.17.0 <= v < 0.18.0","dependencies":{"elm-lang/core":"4.0.0 <= v < 5.0.0"},"test-dependencies":{}}
