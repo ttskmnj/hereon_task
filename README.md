@@ -5,8 +5,8 @@ You need Docker, Docker-compose and Python to be installed on your machine to ru
 ## How to start application
 1. clone this repository
 ```
-$ git clone <repo>
-$ cd <repo>
+$ git clone git@github.com:ttskmnj/hereon_task.git
+$ cd hereon_task
 
 ```
 2. prepare python virtual environment
