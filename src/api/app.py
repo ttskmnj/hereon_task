@@ -7,18 +7,24 @@ app = Flask(__name__)
 
 def get_package_names():
     """Returns all package names."""
+    query = "MATCH (pkg:Package) RETURN pkg.name"
     pkg_names = \
-        [pkg['pkg.name'] for pkg in kg.query("MATCH (pkg:Package) RETURN pkg.name")]
+        [pkg['pkg.name'] for pkg in kg.query(query)]
+
     return pkg_names
 
 
 def get_all_dependencies(pkg_name):
     """Returns all dependencies for given package."""
-    print(pkg_name)
-    query = f"MATCH (pkg:Package {{name: '{pkg_name}'}})-[:DEPENDS_ON*]->(dep:Package) RETURN DISTINCT dep.name"
+    query = f"""
+        MATCH
+            (pkg:Package {{name: '{pkg_name}'}})-[:DEPENDS_ON*]->(dep:Package)
+        RETURN
+            DISTINCT dep.name"""
     deps = kg.query(query)
-    deps = [dep['dep.name'] for dep in deps]
-    return (deps)
+    dep_names = [dep['dep.name'] for dep in deps]
+
+    return (dep_names)
 
 
 @app.route('/package_names', methods=['GET'])

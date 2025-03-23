@@ -29,17 +29,17 @@ def load(pkgs):
 
         for i, pkg in enumerate(batch):
             query += f"""
-            MERGE (p_{i}:Package {{name: "{pkg['name']}"}})
-            ON CREATE
-                SET
-                    p_{i}.version = "{pkg['version']}",
-                    p_{i}.summary = "{escape_quotation(pkg['summary'])}",
-                    p_{i}.license = "{pkg['license']}"
-            ON MATCH
-                SET
-                    p_{i}.version = "{pkg['version']}",
-                    p_{i}.summary = "{escape_quotation(pkg['summary'])}",
-                    p_{i}.license = "{pkg['license']}"
+                MERGE (p_{i}:Package {{name: "{pkg['name']}"}})
+                ON CREATE
+                    SET
+                        p_{i}.version = "{pkg['version']}",
+                        p_{i}.summary = "{escape_quotation(pkg['summary'])}",
+                        p_{i}.license = "{pkg['license']}"
+                ON MATCH
+                    SET
+                        p_{i}.version = "{pkg['version']}",
+                        p_{i}.summary = "{escape_quotation(pkg['summary'])}",
+                        p_{i}.license = "{pkg['license']}"
             """
 
             for j, dep in enumerate(pkg['dependencies'].keys()):

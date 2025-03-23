@@ -1,6 +1,6 @@
-version: '3.8'
 services:
   neo4j:
+    container_name: neo4j
     image: neo4j:5.19.0
     ports:
       - "7474:7474"
@@ -15,4 +15,20 @@ services:
       - ./db/logs:/logs
       - ./db/plugins:/plugins
 
-    
+  app:
+    container_name: app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app
+    ports:
+      - "5001:5001"
+    volumes:
+      - .:/app
+    depends_on:
+      - neo4j
+    environment:
+      NEO4J_URI: ${NEO4J_URI}
+      NEO4J_USER: ${NEO4J_USERNAME}
+      NEO4J_PASSWORD: ${NEO4J_PASSWORD}
+    command: sh -c "sleep 20 && python run_ingest.py && python -m src.api.app"
